@@ -1,7 +1,8 @@
 import "./styles.css";
 
 import Header from "./components/Header";
-import IssueItemMain from "./components/IssueItemMain"
+import Repository from "./components/IssueItemMain"
+import IssueItemMain from "./components/IssueItemMain";
 
 export default function App() {
   return (

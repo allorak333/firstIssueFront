@@ -1,144 +1,125 @@
 .cardContainer {
   width: 1000px;
-  height: 161px;
+  height: 200px;
   position: relative;
   box-shadow: 4px 4px 2px rgba(0, 0, 0, 0.10);
 }
 
 .cardBackground {
   width: 1000px;
-  height: 160px;
+  height: 200px;
   position: absolute;
   left: 0;
   top: 0;
   background: white;
 }
 
+/* 회색 박스 영역을 flex 컨테이너로 변경 */
 .cardFooter {
   width: 1000px;
   height: 40px;
   position: absolute;
   left: 0;
-  top: 120px;
+  top: 160px;
   background: rgba(217, 217, 217, 0.43);
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
 }
 
+/* 왼쪽 영역: Issue from, repository */
+.footerLeft {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* 가운데 영역: 상태 표시기 */
+.footerCenter {
+  margin-left:10px;
+  display: flex;
+  align-items: center;
+}
+
+/* 오른쪽 영역: 언어, star 개수 */
+.footerRight {
+  margin-left:8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* 상태 표시기 */
 .statusIndicator {
   width: 18px;
   height: 17px;
-  position: absolute;
-  left: 285px;
-  top: 131px;
   background: #FF9D48;
   border-radius: 9999px;
 }
 
-.languageLabel {
-  width: 39px;
-  height: 40px;
-  position: absolute;
-  left: 310px;
-  top: 120px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  color: #737373;
-  font-size: 16px;
-  font-family: 'noto sans kr', sans-serif;
-  font-weight: 600;
-  word-wrap: break-word;
-}
-
-.starCount {
-  width: 47px;
-  height: 40px;
-  position: absolute;
-  left: 383px;
-  top: 121px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  color: #7E7E7E;
-  font-size: 16px;
-  font-family: 'noto sans kr', sans-serif;
-  font-weight: 600;
-  word-wrap: break-word;
-}
-
+/* 텍스트 스타일 (absolute 위치 제거) */
 .issueFromLabel {
-  width: 86px;
-  height: 40px;
-  position: absolute;
-  left: 16px;
-  top: 120px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   color: #7E7E7E;
   font-size: 16px;
   font-family: 'noto sans kr', sans-serif;
   font-weight: 600;
-  word-wrap: break-word;
 }
 
 .repositoryLabel {
-  width: 165px;
-  height: 40px;
-  position: absolute;
-  left: 102px;
-  top: 121px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   color: #3B4BFF;
   font-size: 16px;
   font-family: 'noto sans kr', sans-serif;
   font-weight: 600;
-  word-wrap: break-word;
 }
 
-.openedInfo {
-  width: 374px;
-  height: 40px;
-  position: absolute;
-  left: 18px;
-  top: 81px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+.languageLabel {
+  color: #737373;
+  font-size: 16px;
+  margin-left: 7px;
+  font-family: 'noto sans kr', sans-serif;
+  font-weight: 600;
+}
+
+.starCount {
   color: #7E7E7E;
   font-size: 16px;
   font-family: 'noto sans kr', sans-serif;
   font-weight: 600;
-  word-wrap: break-word;
+}
+
+/* 기존 다른 요소들은 위치 유지 */
+.openedInfo {
+  position: absolute;
+  left: 18px;
+  top: 50px;
+  color: #000;
+  font-family: "Noto Sans KR";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px; /* 150% */
 }
 
 .issueTitle {
-  width: 506px;
   position: absolute;
   left: 18px;
   top: 14px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   color: #5353FF;
   font-size: 18px;
   font-family: 'noto sans kr', sans-serif;
   font-weight: 600;
-  word-wrap: break-word;
 }
 
 .tagContainer {
   position: absolute;
   left: 18px;
-  top: 49px;
+  top: 122px;
   display: inline-flex;
   align-items: center;
-  justify-content: flex-start;
   gap: 16px;
 }
 
-/* 공통 태그 스타일 */
+/* 기존 태그 스타일 유지 */
 .tag {
   height: 22px;
   background: rgba(0, 116.23, 240.48, 0.54);
@@ -148,10 +129,9 @@
   align-items: center;
   justify-content: center;
   gap: 10px;
-  padding: 0 5px; /* 기본 패딩 */
+  padding: 0 5px;
 }
 
-/* 태그별 width 및 패딩 오버라이드 */
 .tagDataManagement {
   width: 183px;
 }
@@ -171,20 +151,16 @@
   padding: 0 6px;
 }
 
-/* 공통 태그 텍스트 스타일 */
 .tagText {
   height: 22px;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  align-items: center;
   color: white;
   font-size: 12px;
   font-family: 'noto sans kr', sans-serif;
   font-weight: 600;
-  word-wrap: break-word;
 }
 
-/* 태그 텍스트 별 width (원본 비율 유지) */
 .tagTextDataManagement {
   width: 171px;
 }
