@@ -1,12 +1,12 @@
 .cardContainer {
-  width: 1000px;
+  width: 1056px;
   height: 200px;
   position: relative;
   box-shadow: 4px 4px 2px rgba(0, 0, 0, 0.10);
 }
 
 .cardBackground {
-  width: 1000px;
+  width: 1056px;
   height: 200px;
   position: absolute;
   left: 0;
@@ -16,7 +16,7 @@
 
 /* 회색 박스 영역을 flex 컨테이너로 변경 */
 .cardFooter {
-  width: 1000px;
+  width: 1056px;
   height: 40px;
   position: absolute;
   left: 0;
@@ -132,25 +132,6 @@
   padding: 0 5px;
 }
 
-.tagDataManagement {
-  width: 183px;
-}
-
-.tagTestFailure {
-  width: 89px;
-  padding: 0 7px;
-}
-
-.tagTeam {
-  width: 156px;
-  padding: 0 4px;
-}
-
-.tagNeedsRisk {
-  width: 76px;
-  padding: 0 6px;
-}
-
 .tagText {
   height: 22px;
   display: flex;
@@ -161,18 +142,4 @@
   font-weight: 600;
 }
 
-.tagTextDataManagement {
-  width: 171px;
-}
 
-.tagTextTestFailure {
-  width: 75px;
-}
-
-.tagTextTeam {
-  width: 147px;
-}
-
-.tagTextNeedsRisk {
-  width: 63px;
-}

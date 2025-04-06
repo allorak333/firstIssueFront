@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './Repository.module.css';
-import star from '../assets/star.svg'
+import star from '../../assets/star.svg'
 
 const Repostory = () => {
   return (
