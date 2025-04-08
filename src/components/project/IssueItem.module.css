@@ -1,36 +1,21 @@
 .cardContainer {
-  width: 600px;
-  height: 200px;
+  width: 625px;
+  height: 87px;
   position: relative;
   border-radius: 10px;
-  
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+  border: 1px solid #D4DAEF;
 }
 
-.cardBackground {
+.infoList {
   width: 600px;
-  height: 200px;
-  position: absolute;
-  left: 0;
-  top: 0;
-  background: white;
-  border-radius: 10px;
-border: 1px solid #D4DAEF;
-}
-
-/* 상태 표시기 */
-.statusIndicator {
-  width: 18px;
-  height: 17px;
-  background: #FF9D48;
-  border-radius: 9999px;
-}
-
-/* 텍스트 스타일 (absolute 위치 제거) */
-.issueFromLabel {
-  color: #7E7E7E;
-  font-size: 16px;
-  font-family: 'noto sans kr', sans-serif;
-  font-weight: 600;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 1px;
+  display: inline-flex; 
 }
 
 .repositoryLabel {
@@ -40,54 +25,38 @@ border: 1px solid #D4DAEF;
   font-weight: 600;
 }
 
-.languageLabel {
-  color: #737373;
-  font-size: 16px;
-  margin-left: 7px;
-  font-family: 'noto sans kr', sans-serif;
-  font-weight: 600;
-}
-
-.starCount {
-  color: #7E7E7E;
-  font-size: 16px;
-  font-family: 'noto sans kr', sans-serif;
-  font-weight: 600;
-}
-
-/* 기존 다른 요소들은 위치 유지 */
 .openedInfo {
-  position: absolute;
-  left: 18px;
-  top: 50px;
-  color: #000;
+  align-self: stretch;
+  height: 21;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  color: #7E7E7E;
+  font-size: 12;
   font-family: "Noto Sans KR";
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 24px; /* 150% */
+  font-weight: 600;
+  word-wrap: 'break-word'; 
 }
 
 .issueTitle {
-  position: absolute;
-  left: 18px;
-  top: 14px;
+  align-self: stretch;
+  justify-content: center;
+  display: 'flex';
+  flex-direction: column;
   color: #5353FF;
-  font-size: 18px;
-  font-family: 'noto sans kr', sans-serif;
+  font-size: 16;
+  font-family: "Noto Sans KR";
   font-weight: 600;
+  word-wrap: break-word;
 }
 
 .tagContainer {
-  position: absolute;
-  left: 18px;
-  top: 122px;
+  position: relative;
   display: inline-flex;
   align-items: center;
   gap: 16px;
 }
 
-/* 기존 태그 스타일 유지 */
 .tag {
   height: 22px;
   background: rgba(0, 116.23, 240.48, 0.54);

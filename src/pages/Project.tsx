@@ -21,6 +21,10 @@ const Project: React.FC = () => {
                     <span className={styles.title}>이슈</span>
                     <div className={styles.issueList}>
                         <IssueItem/>
+                        <IssueItem/>
+                        <IssueItem/>
+                        <IssueItem/>
+                        <IssueItem/>
                     </div>
                 </div>
             </div>
